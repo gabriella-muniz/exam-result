@@ -2,7 +2,11 @@
   <div class="w-64 bg-[#f2f2f2] h-screen flex flex-col border-right">
     <!-- Logo -->
     <div class="flex items-center justify-center h-16">
-      <img src="@/assets/cog-azul-semfundo.png" alt="Logo Cogtech" class="w-[121px] h-[17px]" />
+      <img
+        src="@/assets/cog-azul-semfundo.png"
+        alt="Logo Cogtech"
+        class="w-[121px] h-[17px]"
+      />
     </div>
 
     <!-- Menu -->
@@ -12,7 +16,11 @@
         :key="item.label"
         :to="item.href"
         class="flex items-center w-[90%] px-4 py-3 space-x-3 group"
-        :class="item.active ? 'text-[#003838] font-bold border-l-4 border-[#003838]' : 'text-[#6A7777]'"
+        :class="
+          item.active
+            ? 'text-[#003838] font-bold border-l-4 border-[#003838]'
+            : 'text-[#6A7777]'
+        "
         @click="selectMenuItem(item)"
       >
         <!-- Ícone Tabler -->
@@ -44,13 +52,26 @@ export default {
   data() {
     return {
       menuItems: [
-        { label: "Instituição", href: "/institutions", icon: IconLayoutGridFilled, active: true },
+        {
+          label: "Instituição",
+          href: "/institutions",
+          icon: IconLayoutGridFilled,
+          active: true,
+        },
         { label: "Escolas", href: "/schools", icon: IconBuildings },
         { label: "Questões", href: "/questoes", icon: IconMessageQuestion },
         { label: "Simulados", href: "/simulados", icon: IconFileText },
-        { label: "Aplicações de Simulados", href: "/aplicacao", icon: IconCalendarTime },
+        {
+          label: "Aplicações de Simulados",
+          href: "/aplicacao",
+          icon: IconCalendarTime,
+        },
         { label: "Relatórios", href: "/relatorios", icon: IconFileAnalytics },
-        { label: "Matrizes de Referência", href: "/matrizes", icon: IconFileStack },
+        {
+          label: "Matrizes de Referência",
+          href: "/matrizes",
+          icon: IconFileStack,
+        },
       ],
     };
   },

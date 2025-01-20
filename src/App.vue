@@ -14,25 +14,25 @@
           <!-- Ícone de notificação -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
             stroke="currentColor"
-            class="w-6 h-6 text-gray-700"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-bell"
           >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 17h5l-1.405-1.405a7.963 7.963 0 001.25-4.595c0-4.418-3.582-8-8-8s-8 3.582-8 8c0 3.603 2.278 6.672 5.556 7.595L9 17h6z"
+              d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
             />
+            <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
           </svg>
 
           <!-- Foto do usuário -->
-          <img
-            :src="userImage"
-            alt="Usuário"
-            class="w-10 h-10 rounded-full"
-          />
+          <img :src="userImage" alt="Usuário" class="w-10 h-10 rounded-full" />
         </div>
       </header>
 
@@ -44,9 +44,8 @@
   </div>
 </template>
 
-
 <script>
-import Sidebar from './components/Sidebar.vue';
+import Sidebar from "./components/Sidebar.vue";
 
 export default {
   components: {
@@ -54,11 +53,8 @@ export default {
   },
   data() {
     return {
-      userImage: '/path/to/user-image.jpg', 
+      userImage: "/path/to/user-image.jpg",
     };
   },
 };
 </script>
-
-
-
